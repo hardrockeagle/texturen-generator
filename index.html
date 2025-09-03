@@ -94,10 +94,34 @@ select option {
   scrollbar-color: #555 #2b2b2b; /* Daumen-Farbe + Track-Farbe */
   scrollbar-width: thin;          /* dünne Scrollleisten */
 }
+/* Standard: Generator sichtbar, Hinweis versteckt */
+.app {
+  display: block;
+}
+.mobile-block {
+  display: none;
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+/* Auf kleinen Geräten Generator sperren */
+@media (max-width: 1024px) {
+  .app {
+    display: none;
+  }
+  .mobile-block {
+    display: block;
+  }
+}
 
 </style>
 </head>
 <body>
+	<div class="mobile-block">
+  ⚠️ Der Texturen-Generator ist nur für Desktop optimiert.<br>
+  Bitte am PC oder Laptop öffnen.
+</div>
   <div class="app">
     <header class="panel" style="display:flex;align-items:center">
       <div class="logo">
@@ -116,30 +140,7 @@ select option {
         <button id="presetFabric" class="btn">Textil</button>
 		<button id="randBtn" class="btn">🎲 Zufall</button>
         </div>
-
-		  
-  <div class="app">
-    <!-- Generator -->
-  </div>
-  <div id="mobileBlock" style="display:none; text-align:center; padding:40px; font-size:18px;">
-    ⚠️ Der Texturen-Generator ist nur für Desktop optimiert.
-  </div>
-
-  <script>
-    function checkWidth() {
-      if (window.innerWidth < 1024) {
-        document.querySelector('.app').style.display = 'none';
-        document.getElementById('mobileBlock').style.display = 'block';
-      } else {
-        document.querySelector('.app').style.display = 'grid'; // oder block, je nach deinem Layout
-        document.getElementById('mobileBlock').style.display = 'none';
-      }
-    }
-    window.addEventListener('resize', checkWidth);
-    window.addEventListener('load', checkWidth);
-  </script>
-
-		  
+	    
     </header>
 
     <aside class="panel left">
@@ -781,5 +782,6 @@ scheduleRender();
 </script>
 </body>
 </html>
+
 
 
