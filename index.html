@@ -96,7 +96,7 @@ select option {
 }
 /* Standard: Generator sichtbar, Hinweis versteckt */
 .app {
-  display: block;
+  display: grid;
 }
 .mobile-block {
   display: none;
@@ -118,10 +118,7 @@ select option {
 </style>
 </head>
 <body>
-	<div class="mobile-block">
-  ⚠️ Der Texturen-Generator ist nur für Desktop optimiert.<br>
-  Bitte am PC oder Laptop öffnen.
-</div>
+
   <div class="app">
     <header class="panel" style="display:flex;align-items:center">
       <div class="logo">
@@ -129,6 +126,11 @@ select option {
         <div>
           <div style="font-weight:800">Texturen-Generator - <b>Soma</b>Werk Medienproduktion</div>
           <div class="small">Generator für nahtlose Texturen</div>
+			<!-- Hinweis für mobile Geräte -->
+<div class="mobile-block">
+  ⚠️ Der Texturen-Generator ist nur für Desktop optimiert.<br>
+  Bitte am PC oder Laptop öffnen.
+</div>
         </div>
       </div>
       <div class="controls">
@@ -782,6 +784,7 @@ scheduleRender();
 </script>
 </body>
 </html>
+
 
 
 
