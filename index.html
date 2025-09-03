@@ -95,7 +95,7 @@ select option {
   scrollbar-width: thin;          /* dünne Scrollleisten */
 }
 /* Standard: Generator sichtbar, Hinweis versteckt */
-.app {
+#app {
   display: grid;
 }
 .mobile-block {
@@ -107,7 +107,7 @@ select option {
 
 /* Auf kleinen Geräten Generator sperren */
 @media (max-width: 1024px) {
-  .app {
+  #app {
     display: none;
   }
   .mobile-block {
@@ -803,6 +803,7 @@ scheduleRender();
 </script>
 </body>
 </html>
+
 
 
 
