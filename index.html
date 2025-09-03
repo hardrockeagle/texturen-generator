@@ -110,8 +110,7 @@ select option {
   #app {
     display: none;
   }
-  .mobile-block {
-    display: block;
+  .mobile-block { display: block; }
   }
 }
 
@@ -267,12 +266,12 @@ select option {
     function checkDevice() {
       if (window.innerWidth < 1024) {
         // App ausblenden
-        document.querySelector('.app').style.display = 'none';
+        document.querySelector('#app').style.display = 'none';
         // Warnung einblenden
         document.querySelector('.mobile-block').style.display = 'block';
       } else {
         // App sichtbar
-        document.querySelector('.app').style.display = 'grid';
+        document.querySelector('#app').style.display = 'grid';
         // Warnung ausblenden
         document.querySelector('.mobile-block').style.display = 'none';
       }
@@ -803,6 +802,7 @@ scheduleRender();
 </script>
 </body>
 </html>
+
 
 
 
