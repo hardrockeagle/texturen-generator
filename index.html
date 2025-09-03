@@ -262,7 +262,26 @@ select option {
       <div class="small">&copy; <b>Soma</b>Werk Medienproduktion</div>
     </footer>
   </div>
+	
+<script>
+    function checkDevice() {
+      if (window.innerWidth < 1024) {
+        // App ausblenden
+        document.querySelector('.app').style.display = 'none';
+        // Warnung einblenden
+        document.querySelector('.mobile-block').style.display = 'block';
+      } else {
+        // App sichtbar
+        document.querySelector('.app').style.display = 'grid';
+        // Warnung ausblenden
+        document.querySelector('.mobile-block').style.display = 'none';
+      }
+    }
 
+    // Bei Start und bei Fenstergröße ändern prüfen
+    window.addEventListener('load', checkDevice);
+    window.addEventListener('resize', checkDevice);
+  </script>
 <script>
 /* Texture Lab - single file
    - Tileable 3D value-noise implementation for seamless textures
@@ -784,6 +803,7 @@ scheduleRender();
 </script>
 </body>
 </html>
+
 
 
 
